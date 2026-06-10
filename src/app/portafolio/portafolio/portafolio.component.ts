@@ -41,7 +41,8 @@ export class PortafolioComponent implements OnInit, AfterViewInit {
     'SQL',
     'Flutter',
     'Node',
-    'Microservicios'
+    'Microservicios',
+    'Jest'
   ];
 
   projects = [
