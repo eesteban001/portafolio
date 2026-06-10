@@ -32,7 +32,7 @@ jobs:
 
       - name: Build Angular App
         run: |
-          npm start
+          npm run build
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
