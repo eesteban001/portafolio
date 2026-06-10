@@ -1,0 +1,252 @@
+<div [class.dark]="isDark" [class.light]="!isDark">
+
+  <!-- FONDO -->
+
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Esteban Castillo
+    </div>
+
+    <ul>
+
+      <li>
+        <a href="#about">Sobre mí</a>
+      </li>
+
+      <li>
+        <a href="#experience">Experiencia</a>
+      </li>
+
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+
+      <li>
+        <a href="#projects">Proyectos</a>
+      </li>
+
+    </ul>
+
+    <button
+      class="theme-btn"
+      (click)="toggleTheme()">
+
+      {{ isDark ? '☀️' : '🌙' }}
+
+    </button>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <h1>
+        Erwin Esteban
+        <span>Castillo González</span>
+      </h1>
+
+      <h2 id="typed-text"></h2>
+
+      <p>
+        Desarrollador Full Stack especializado en Angular,
+        Java, APIs REST y Seguridad Informática.
+      </p>
+
+      <div class="socials">
+
+        <a href="https://github.com/eesteban001">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/esteban-castillo-767128219/">
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="mailto:ec2818913@gmail.com">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+
+      </div>
+
+      <div class="hero-buttons">
+
+        <button class="outline" (click)="descargarCV()">
+          Descargar CV
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+
+      <img
+        src="assets/profile.jpeg"
+        alt="profile">
+
+    </div>
+
+  </section>
+
+  <!-- ESTADISTICAS -->
+
+  <section class="stats">
+
+    <div
+      *ngFor="let stat of stats"
+      class="stat-card"
+      data-aos="zoom-in">
+
+      <h2>{{ stat.value }}</h2>
+      <span>{{ stat.title }}</span>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE MI -->
+
+  <section
+    id="about"
+    class="section"
+    data-aos="fade-up">
+
+    <h2>Sobre Mi</h2>
+
+    <p>
+        Ingeniero de Sistemas con Maestría en Seguridad Informática,
+        enfocado en el diseño, desarrollo e implementación de soluciones
+        tecnológicas. Apasionado por la programación y la innovación,
+        con interés en el aprendizaje continuo. Orientado a resultados,
+        con capacidad para adaptarme a nuevos entornos y aportar valor
+        a través de soluciones tecnológicas alineadas a las necesidades
+        del negocio.
+
+    </p>
+
+  </section>
+
+  <!-- EXPERIENCIA -->
+
+  <section
+    id="experience"
+    class="section">
+
+    <h2>Experiencia Profesional</h2>
+
+    <div class="timeline">
+
+      <div
+        class="timeline-card"
+        data-aos="fade-right">
+
+        <h3>Analista de Sistemas - Superintendencia de Administración Tributaria</h3>
+
+        <span>2022 - 2025</span>
+
+        <br>
+        <br>
+        <h3>Responsable del análisis y desarrollo de aplicaciones FrontEnd y BackEnd,
+            gestionando requerimientos a partir de casos de uso y tickets,
+            y asegurando comunicación y cumplimiento de normativas.</h3>
+        <p>
+            Tecnologias: Angular, Postman, PostgreSQL, Java, Spring
+            boot, JENKINS, Oracle
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- TECNOLOGIAS -->
+
+  <section
+    id="skills"
+    class="section">
+
+    <h2>Tecnologías</h2>
+
+    <div class="skills">
+
+      <span
+        *ngFor="let tech of technologies">
+
+        {{ tech }}
+
+      </span>
+
+    </div>
+
+  </section>
+
+  <!-- PROYECTOS -->
+
+  <section
+    id="projects"
+    class="section">
+
+    <h2>Proyectos Destacados</h2>
+
+    <div class="project-grid">
+
+      <div
+        *ngFor="let project of projects"
+        class="project-card"
+        data-aos="zoom-in">
+
+        <h3>{{ project.title }}</h3>
+
+        <p>
+          {{ project.description }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CERTIFICACIONES -->
+
+  <section class="section">
+
+    <h2>Certificaciones</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        Maestría en Seguridad Informática
+      </div>
+
+      <div class="project-card">
+        Flutter
+      </div>
+
+      <div class="project-card">
+        Angular Development
+      </div>
+
+      <div class="project-card">
+        Ingles Avanzado
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
